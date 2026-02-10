@@ -2,7 +2,6 @@ package org.example.nttdata.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.EmbeddedColumnNaming;
 
 @Data
 @Entity
