@@ -16,12 +16,6 @@ public class ReservaPuesto {
     @Column(name = "id_reserva")
     private Integer idReserva;
 
-    @Column(name = "id_puesto")
-    private Integer idPuesto;
-
-    @Column(name = "id_usuario")
-    private Integer idUsuario;
-
     private LocalDate fecha;
 
     @Column(name = "hora_inicio")
@@ -29,4 +23,12 @@ public class ReservaPuesto {
 
     @Column(name = "hora_fin")
     private Time horaFin;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
+
+    @ManyToOne
+    @JoinColumn(name = "id_puesto")
+    private PuestoTrabajo puestoTrabajo;
 }
