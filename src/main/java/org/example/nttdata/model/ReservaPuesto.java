@@ -3,8 +3,8 @@ package org.example.nttdata.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -19,10 +19,10 @@ public class ReservaPuesto {
     private LocalDate fecha;
 
     @Column(name = "hora_inicio")
-    private Time horaInicio;
+    private LocalDateTime horaInicio;
 
     @Column(name = "hora_fin")
-    private Time horaFin;
+    private LocalDateTime horaFin;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario")

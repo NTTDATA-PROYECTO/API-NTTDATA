@@ -10,6 +10,8 @@ import java.util.List;
 public class PuestoTrabajoDTO {
     private Integer idPuesto;
     private Boolean tieneOrdenador;
-    private Planta planta;
-    private List<ReservaPuesto> reservaPuestos;
+    private Integer idPlanta;
+
+    private Boolean ocupado;
+//    private List<ReservaPuesto> reservaPuestos;
 }

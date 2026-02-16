@@ -1,5 +1,6 @@
 package org.example.nttdata.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,5 +24,6 @@ public class Planta {
     private List<Sala> salas;
 
     @OneToMany(mappedBy = "planta")
+    @JsonManagedReference
     private List<PuestoTrabajo> puestosTrabajo;
 }

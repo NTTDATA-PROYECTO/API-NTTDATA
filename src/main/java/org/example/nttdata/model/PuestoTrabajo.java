@@ -1,5 +1,6 @@
 package org.example.nttdata.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,5 +24,6 @@ public class PuestoTrabajo {
     private Planta planta;
 
     @OneToMany(mappedBy = "puestoTrabajo")
+    @JsonBackReference
     private List<ReservaPuesto> reservasPuesto;
 }
